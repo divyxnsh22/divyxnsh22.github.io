@@ -670,77 +670,117 @@
 
 
 
-      <!--
-        - #PORTFOLIO
-      -->
+     <!--
+  - #PORTFOLIO
+-->
 
-      <article class="portfolio" data-page="portfolio">
+<article class="portfolio" data-page="portfolio">
 
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
+  <header>
+    <h2 class="h2 article-title">Portfolio</h2>
+  </header>
 
-        <section class="projects">
+  <section class="projects">
 
-          <ul class="filter-list">
+    <!-- Filter buttons -->
+    <ul class="filter-list">
 
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
+      <li class="filter-item">
+        <button class="active" data-filter-btn>All</button>
+      </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>Hackathons</button>
-            </li>
+      <li class="filter-item">
+        <button data-filter-btn>Hackathons</button>
+      </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
+      <li class="filter-item">
+        <button data-filter-btn>Applications</button>
+      </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
+      <li class="filter-item">
+        <button data-filter-btn>Web development</button>
+      </li>
 
-          </ul>
+    </ul>
 
-          <div class="filter-select-box">
+    <!-- Mobile select box -->
+    <div class="filter-select-box">
+      <button class="filter-select" data-select>
+        <div class="select-value" data-selecct-value>Select category</div>
+        <div class="select-icon">
+          <ion-icon name="chevron-down"></ion-icon>
+        </div>
+      </button>
 
-            <button class="filter-select" data-select>
+      <ul class="select-list">
+        <li class="select-item">
+          <button data-select-item>All</button>
+        </li>
+        <li class="select-item">
+          <button data-select-item>Hackathons</button>
+        </li>
+        <li class="select-item">
+          <button data-select-item>Applications</button>
+        </li>
+        <li class="select-item">
+          <button data-select-item>Web development</button>
+        </li>
+      </ul>
+    </div>
 
-              <div class="select-value" data-selecct-value>Select category</div>
+    <!-- Project Grid -->
+    <ul class="project-list">
 
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
+      <!-- Flashcards Project -->
+      <li class="project-item" data-filter-item data-category="Applications">
+        <a href="https://github.com/me50/divyxnsh22" target="_blank" class="project-link">
+          <figure class="project-img">
+            <img src="https://via.placeholder.com/400x200?text=Flashcards" alt="Flashcards App Screenshot" loading="lazy">
+          </figure>
+          <h3 class="project-title">Flashcards (CS50 Final)</h3>
+          <p class="project-category">Python • Flask • HTML • CSS</p>
+        </a>
+      </li>
 
-            </button>
+      <!-- Placeholder Project 1 -->
+      <li class="project-item" data-filter-item data-category="Web development">
+        <a href="https://github.com/yourusername/placeholder1" target="_blank" class="project-link">
+          <figure class="project-img">
+            <img src="https://via.placeholder.com/400x200?text=Portfolio+Site" alt="Portfolio Screenshot" loading="lazy">
+          </figure>
+          <h3 class="project-title">Personal Portfolio Website</h3>
+          <p class="project-category">HTML • CSS • JavaScript</p>
+        </a>
+      </li>
 
-            <ul class="select-list">
+      <!-- Placeholder Project 2 -->
+      <li class="project-item" data-filter-item data-category="Hackathons">
+        <a href="https://github.com/yourusername/placeholder2" target="_blank" class="project-link">
+          <figure class="project-img">
+            <img src="https://via.placeholder.com/400x200?text=Hackathon+App" alt="Hackathon App Screenshot" loading="lazy">
+          </figure>
+          <h3 class="project-title">Hackathon Prototype</h3>
+          <p class="project-category">SwiftUI • Firebase</p>
+        </a>
+      </li>
 
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
+      <!-- Placeholder Project 3 -->
+      <li class="project-item" data-filter-item data-category="Applications">
+        <a href="https://github.com/yourusername/placeholder3" target="_blank" class="project-link">
+          <figure class="project-img">
+            <img src="https://via.placeholder.com/400x200?text=ToDo+App" alt="ToDo App Screenshot" loading="lazy">
+          </figure>
+          <h3 class="project-title">Simple To-Do App</h3>
+          <p class="project-category">Java • Android Studio</p>
+        </a>
+      </li>
 
-              <li class="select-item">
-                <button data-select-item>Hackathons</button>
-              </li>
+    </ul>
+    <!-- End of project-list -->
 
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
+  </section>
 
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-         
-        </section>
-
-      </article>
-
+</article>
 
 
 
