@@ -1880,3 +1880,112 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/* === Portfolio Section === */
+
+.portfolio {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.article-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Filter List Buttons */
+.filter-list {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+}
+
+.filter-item button {
+  background: #f3f3f3;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.filter-item button.active,
+.filter-item button:hover {
+  background: #0073e6;
+  color: #fff;
+  border-color: #0073e6;
+}
+
+/* Mobile Dropdown */
+.filter-select-box {
+  display: none; /* keep hidden on desktop; enable if needed */
+}
+
+/* Grid for Projects */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual Project Card */
+.project-item {
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.project-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Thumbnail */
+.project-img img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text Info */
+.project-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.75rem 1rem 0.25rem 1rem;
+}
+
+.project-category {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 1rem 1rem 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .filter-list {
+    flex-wrap: wrap;
+  }
+  .project-img img {
+    height: 140px;
+  }
+}
