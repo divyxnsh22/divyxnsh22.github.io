@@ -1881,111 +1881,78 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
-/* === Portfolio Section === */
-
-.portfolio {
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+/* ---------- Portfolio (dark theme friendly) ---------- */
+:root{
+  --card-bg: var(--eerie-black-2, #222);
+  --card-stroke: var(--jet, #2e2e2e);
+  --text-main: var(--white, #eee);
+  --text-muted: var(--light-gray, #a6a6a6);
+  --shadow-1: 0 8px 24px rgba(0,0,0,.25);
 }
 
-/* Section Title */
-.article-title {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  text-align: center;
-}
+.projects { margin-top: 1rem; }
 
-/* Filter List Buttons */
-.filter-list {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  list-style: none;
-  margin: 0 0 1.5rem 0;
-  padding: 0;
-}
-
-.filter-item button {
-  background: #f3f3f3;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.filter-item button.active,
-.filter-item button:hover {
-  background: #0073e6;
-  color: #fff;
-  border-color: #0073e6;
-}
-
-/* Mobile Dropdown */
-.filter-select-box {
-  display: none; /* keep hidden on desktop; enable if needed */
-}
-
-/* Grid for Projects */
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
+.project-list{
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
 }
 
-/* Individual Project Card */
-.project-item {
-  background: #fff;
-  border: 1px solid #e1e1e1;
-  border-radius: 10px;
+/* Your template usually hides items until .active is set. Keep that behavior. */
+.project-item{ display: none; }
+.project-item.active{ display: block; }
+
+.project-item{
+  background: var(--card-bg);
+  border: 1px solid var(--card-stroke);
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-1);
+  transition: transform .18s ease, box-shadow .18s ease;
 }
 
-.project-item:hover {
+.project-item:hover{
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
 }
 
-.project-link {
+.project-link{ display: block; color: inherit; text-decoration: none; height: 100%; }
+
+.project-img img{
   display: block;
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Thumbnail */
-.project-img img {
   width: 100%;
   height: 160px;
   object-fit: cover;
-  display: block;
+  border-bottom: 1px solid var(--card-stroke);
 }
 
-/* Text Info */
-.project-title {
-  font-size: 1.1rem;
+.project-title{
+  color: var(--text-main);
   font-weight: 600;
-  margin: 0.75rem 1rem 0.25rem 1rem;
+  font-size: 1rem;
+  margin: .75rem 1rem .25rem;
 }
 
-.project-category {
-  font-size: 0.9rem;
-  color: #666;
-  margin: 0 1rem 1rem 1rem;
+.project-category{
+  color: var(--text-muted);
+  font-size: .9rem;
+  margin: 0 1rem 1rem;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .filter-list {
-    flex-wrap: wrap;
-  }
-  .project-img img {
-    height: 140px;
-  }
+/* Filter chips – keep your current look; just add subtle tweaks */
+.filter-list{
+  display: flex; gap: .5rem; flex-wrap: wrap;
+  list-style: none; margin: 0 0 1rem; padding: 0;
 }
+.filter-item button{
+  border: 1px solid var(--card-stroke);
+  background: var(--card-bg);
+  color: var(--text-main);
+  padding: .45rem .8rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.filter-item button.active{ filter: brightness(1.25); }
